@@ -16,6 +16,8 @@
 		3CFE497526D50DBF00154719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFE497326D50DBF00154719 /* LaunchScreen.storyboard */; };
 		3CFE498026D50DBF00154719 /* idonnotnoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE497F26D50DBF00154719 /* idonnotnoTests.swift */; };
 		3CFE498B26D50DBF00154719 /* idonnotnoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE498A26D50DBF00154719 /* idonnotnoUITests.swift */; };
+		3CFE499D26D5289800154719 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE499C26D5289800154719 /* RandomViewController.swift */; };
+		3CFE499F26D5358200154719 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFE499E26D5358200154719 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		3CFE498626D50DBF00154719 /* idonnotnoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = idonnotnoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CFE498A26D50DBF00154719 /* idonnotnoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idonnotnoUITests.swift; sourceTree = "<group>"; };
 		3CFE498C26D50DBF00154719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CFE499C26D5289800154719 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
+		3CFE499E26D5358200154719 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +108,9 @@
 				3CFE496526D50DBB00154719 /* AppDelegate.swift */,
 				3CFE496726D50DBB00154719 /* SceneDelegate.swift */,
 				3CFE496926D50DBB00154719 /* ViewController.swift */,
+				3CFE499C26D5289800154719 /* RandomViewController.swift */,
 				3CFE496B26D50DBB00154719 /* Main.storyboard */,
+				3CFE499E26D5358200154719 /* ListViewController.swift */,
 				3CFE497126D50DBF00154719 /* Assets.xcassets */,
 				3CFE497326D50DBF00154719 /* LaunchScreen.storyboard */,
 				3CFE497626D50DBF00154719 /* Info.plist */,
@@ -263,7 +269,9 @@
 			files = (
 				3CFE496A26D50DBB00154719 /* ViewController.swift in Sources */,
 				3CFE496626D50DBB00154719 /* AppDelegate.swift in Sources */,
+				3CFE499F26D5358200154719 /* ListViewController.swift in Sources */,
 				3CFE497026D50DBB00154719 /* idonnotno.xcdatamodeld in Sources */,
+				3CFE499D26D5289800154719 /* RandomViewController.swift in Sources */,
 				3CFE496826D50DBB00154719 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,7 +457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ran.idonnotno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -467,7 +475,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ran.idonnotno;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
