@@ -25,11 +25,28 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.textLabel?.text=list[p][indexPath.row]
         return cell
     }
+    // return the type of edting style
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    // Delete action
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            list[p].remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+            
+        }
+    }
     
     @IBOutlet weak var nameSegmentedControl:UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    let list = [["🦆烤鸭鸭","🍗韩餐","🔥火锅","🥗沙拉","🍜拉面","🍡串串"],["⚠️不好吃的1","⚠️不好吃的2","⚠️不好吃的3","⚠️不好吃的4","⚠️不好吃的5","⚠️不好吃的6"]]
+    @IBOutlet weak var addButtonLabel: UIButton!
+    
+    
+    var list = [["🦆烤鸭鸭","🍗韩餐","🔥火锅","🥗沙拉","🍜拉面","🍡串串"],["⚠️不好吃的1","⚠️不好吃的2","⚠️不好吃的3","⚠️不好吃的4","⚠️不好吃的5","⚠️不好吃的6"]]
     
     var p : Int = 0
     
@@ -37,7 +54,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         p = sender.selectedSegmentIndex
         tableView.reloadData()
     }
-
+    
+    
+    @IBAction func addButtonAction(_ sender: Any) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
